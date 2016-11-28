@@ -56,9 +56,6 @@ class LinkedList(object):
         if self.tail is None:
             self.head = node
             self.tail = node
-        elif self.head.next is None:
-            self.head.next = node
-            self.tail = node
         else:
             self.tail.next = node
             self.tail = node
@@ -71,9 +68,6 @@ class LinkedList(object):
         if self.head is None:
             self.head = node
             self.tail = node
-        elif self.head.next is None:
-            self.head = node
-            self.head.next = self.tail
         else:
             node.next = self.head
             self.head = node
@@ -86,6 +80,8 @@ class LinkedList(object):
     def find(self, quality):
         """Return an item from this linked list satisfying the given quality"""
         # TODO: find item where quality(item) is True
+
+        # assert ll.find(lambda item: item == 'B') == 'B'
 
         pass
 
